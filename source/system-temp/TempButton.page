@@ -29,6 +29,7 @@ temperature.on('message', function(data) {
     var unit = temp.indexOf('C')>0 ? 'C' : 'F';
     temp = temp.split(unit);
     if (temp[0] && $('#cpu-temp').length>0) $('#cpu-temp').html("<i class='ups fa fa-thermometer'></i>_(Temperature)_: "+temp[0]+unit);
+    if (temp[0] && $('#cpu-temp0').length>0) $('#cpu-temp0').html(temp[0]+unit);
     if (temp[1] && $('#mb-temp').length>0) $('#mb-temp').html("<i class='ups fa fa-thermometer'></i>_(Temperature)_: "+temp[1]+unit);
   }
 });
